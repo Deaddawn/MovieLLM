@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Enhancing Long Video Understanding with AI-Generated Movies">
+  <meta name="keywords" content="LLM, Video Understanding, AI-Generated">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MovieLLM: Enhancing Long Video Understanding with AI-Generated Movies</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MovieLLM: Enhancing Long Video Understanding with AI-Generated
+              Movies</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/Deaddawn">Zhende Song</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/doctorlightt">Chenchen Wang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/sjmFDU">Jiamu Sheng</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://icoz69.github.io/">Chi Zhang</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a
+                  href="https://scholar.google.com/citations?hl=en&user=BJdigYsAAAAJ&view_op=list_works&sortby=pubdate">Gang
+                  Yu</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=gsLd2ccAAAAJ">Jiayuan Fan</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://eetchen.github.io/">Tao Chen</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Fudan University,</span>
+              <span class="author-block"><sup>2</sup>Tencent PCG</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/Deaddawn/MovieLLM-code"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data(coming soon)</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="hero teaser">
+
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3 has-text-centered">
+          <span class="dnerf"><img src="./static/images/icon.png" alt="Icon"
+              style="width: 48px; height: 48px; vertical-align: middle;">Consistent Key Frames From MovieLLM</span>
+        </h2>
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/cat0.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/cat4.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/cat7.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/cat14.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/cat93.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/cat106.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">MovieLLM</span> generate consistent key frames with immobilized style on various scenes
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column ">
+          <div class="publication-video">
+            <video id="teaser" controls loop playsinline height="100%">
+              <source src="./static/videos/MovieLLM.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Teaser. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="content has-text-justified">
+            <div class="center-image">
+              <figure>
+                <img src="./static/images/fig1.png" class="interpolation-image"
+                  alt="Interpolate start reference image." />
+                <figcaption>
+                  <strong>Examples of generated long video instruction data.</strong> We use GPT-4 and guided
+                  text-to-image generation models
+                  to generate consistent key frames of move-level video with reasonable lines and corresponding
+                  question-answer pairs.
+                  These data are used to train multimodal large language models on video understanding.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The development of multimodal models has marked a significant step forward in how machines understand
+              videos. These models have shown promise in analyzing short video clips. However, when it comes to longer
+              formats like movies, they often fall short. The main hurdles are the lack of high-quality, diverse video
+              data and the intensive work required to collect or annotate such data. In the face of these challenges, we
+              propose MovieLLM, a novel framework designed to create synthetic, high-quality data for long videos. This
+              framework leverages the power of GPT-4 and text-to-image models to generate detailed scripts and
+              corresponding visuals. Our approach stands out for its flexibility and scalability, making it a superior
+              alternative to traditional data collection methods.
+              Our extensive experiments validate that the data produced by MovieLLM significantly improves the
+              performance of multimodal models in understanding complex video narratives, overcoming the limitations of
+              existing datasets regarding scarcity and bias.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- framework. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column ">
+          <h2 class="title is-3">Pipeline</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/PIPELINE.png" class="framework" />
+            <p>The overall pipeline of our MovieLLM. (a) Rather than limiting plot generation to conventional data
+              sources such as the web or existing datasets, we harness the power of GPT-4 to produce synthesized data.
+              By providing specific elements such as themes, overview, and styles, we guide GPT-4 to produce movie-level
+              key frame descriptions tailored to the latter generation process.
+              (b) By adeptly employing textual inversion, we immobilize the style descriptions generated from the script
+              onto the latent space of the diffusion model. This approach guides the model to generate scenes in a fixed
+              style while maintaining diversity under a unified aesthetic.
+              (c) By integrating the powerful generative capabilities of GPT-4 with the developed style-guided diffusion
+              model, we produce style-consistent key frames and corresponding QA pairs, resulting in a comprehensive
+              instruction tuning corpus, combining the visual data with QA pairs.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column ">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <video id="teaser" controls loop playsinline height="100%">
+              <source src="./static/videos/MovieLLM.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column ">
+          <h2 class="title is-3">More Results</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/appendix6-1.png" class="appendix" />
+            <img src="./static/images/appendix1-1.png" class="appendix" />
+            <img src="./static/images/appendix2-1.png" class="appendix" />
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+
+  </section>
+
+
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/Deaddawn/MovieLLM-code" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
